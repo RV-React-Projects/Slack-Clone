@@ -6,7 +6,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,23 +22,63 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [{ "name": "next" }],
     "baseUrl": "./src/",
     "paths": {
-      "@components/*": ["components/ui/*"],
-      "@hooks/*": ["hooks/*"],
-      "@thunk/*": ["redux/thunk/*"],
-      "@slice/*": ["redux/slice/*"],
-      "@redux/*": ["redux/*"],
-      "@utils/*": ["utils/*"],
-      "@network": ["network"],
-      "@common/*": ["common/*"],
-      "@services/*": ["services/*"],
-      "@context/*": ["context/*"],
-      "@constants/*": ["constants/*"],
-      "@yup/*": ["yup/*"]
-    }
+      "@components/*": [
+        "components/ui/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@thunk/*": [
+        "redux/thunk/*"
+      ],
+      "@slice/*": [
+        "redux/slice/*"
+      ],
+      "@redux/*": [
+        "redux/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@network": [
+        "network"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@context/*": [
+        "context/*"
+      ],
+      "@constants/*": [
+        "constants/*"
+      ],
+      "@yup/*": [
+        "yup/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "plugins": [
+    {
+      "name": "next"
+    }
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
