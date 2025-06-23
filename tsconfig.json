@@ -20,17 +20,15 @@
     "incremental": true,
     "baseUrl": "./src/",
     "paths": {
+      "@network": ["network/*"],
+      "@constant/*": ["constant/*"],
       "@components/*": ["components/ui/*"],
       "@hooks/*": ["hooks/*"],
       "@thunk/*": ["redux/thunk/*"],
       "@slice/*": ["redux/slice/*"],
       "@redux/*": ["redux/*"],
       "@utils/*": ["utils/*"],
-      "@network": ["network"],
       "@common/*": ["common/*"],
-      "@services/*": ["services/*"],
-      "@context/*": ["context/*"],
-      "@constants/*": ["constants/*"],
       "@yup/*": ["yup/*"]
     },
     "plugins": [{ "name": "next" }]
