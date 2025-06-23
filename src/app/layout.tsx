@@ -1,12 +1,7 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
-import './globals.css';
-
-const geistSans = Roboto({
-  variable: '--font-roboto',
-  subsets: ['greek'],
-  weight: ['100', '300', '400', '500', '700', '900'],
-});
+import '../globals.css';
+import AppProviders from 'AppProvider';
+import { roboto } from 'configs/Fonts';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,8 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable}  antialiased`}>{children}</body>
+    <html
+      suppressHydrationWarning
+      lang="en"
+      className={`${roboto.variable} scroll-smooth antialiased`}>
+      <body>
+        <AppProviders>{children}</AppProviders>
+      </body>
     </html>
   );
 }
