@@ -1,0 +1,12 @@
+#!/bin/bash
+protected_branches=("main" "master" "develop" "production")
+
+current_branch=$(git symbolic-ref --short HEAD)
+
+echo "current_branch $current_branch"
+for branch in "${protected_branches[@]}"; do
+    if [ "$current_branch" == "$branch" ]; then
+        echo "Error: Pushing to $branch is not allowed!"
+        exit 1
+    fi
+done

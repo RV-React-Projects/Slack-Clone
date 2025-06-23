@@ -1,0 +1,10 @@
+bun run tsc
+bun run lint
+bun test
+
+branch="$(git symbolic-ref --short HEAD)"
+
+if [ "$branch" = "main" ] || [ "$branch" = "master" ] || [ "$branch" = "develop" ]; then
+  echo "❌ You cannot commit directly to the '$branch' branch."
+  exit 1
+fi
