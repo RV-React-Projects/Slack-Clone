@@ -1,5 +1,5 @@
-bun run tsc
-bun run lint
+bun tsc
+bun lint
 bun test
 
 branch="$(git symbolic-ref --short HEAD)"
